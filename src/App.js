@@ -1,19 +1,25 @@
 import './App.css';
-import Header from './components/Header'
-import Aboutme from './components/challenges/day01/Aboutme'
-import Footer from './components/challenges/day01/Footer'
-import Home from './components/challenges/day01/Home'
+import NameProp from './components/NameProp'
+import Contacts from './components/challenges/day02/Contacts'
+import State from './components/State'
+
 
 function App() { //this is a root component
                 // parent function
-  const name = 'Nate' //JS above return statement can be injected into JSX using {}
-
+  const profile = {name: "Rubbie", age: "69", school: "The Dentist Academy", graduationYear: "1969"} //for method #1
   return (
+
     <div className="App">
-      <Home />
-      <Header /> { /* this is how you mount a component */ }
-      <Aboutme /> { /* child function */ }
-      <Footer />
+      <NameProp name="Nate"/>;
+      <Contacts name="Natey" age="25" school="IU" graduationYear="2019"/> {/* method #1 */}
+      <Contacts {...profile}/> {/* method #2 */}
+      <p>--------------------------------------------------</p>
+      <State />
+      
+      
+      
+      
+     
 
     </div>
     
